@@ -1,0 +1,5 @@
+# .slugignore
+*.psd
+*.pdf
+/test
+/spec
