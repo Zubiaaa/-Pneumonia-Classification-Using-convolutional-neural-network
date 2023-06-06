@@ -27,18 +27,18 @@ import tensorflow.keras
 from PIL import Image, ImageOps
 import numpy as np
 
-# Disable scientific notation for clarity
+#Disable scientific notation for clarity
 np.set_printoptions(suppress=True)
 
-# Load the model
+#Load the model
 model = tensorflow.keras.models.load_model('keras_model.h5')
 
-# Create the array of the right shape to feed into the keras model
-# The 'length' or number of images you can put into the array is
-# determined by the first position in the shape tuple, in this case 1.
+#Create the array of the right shape to feed into the keras model
+#The 'length' or number of images you can put into the array is
+#determined by the first position in the shape tuple, in this case 1.
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
-# Replace this with the path to your image
+#Replace this with the path to your image
 image = Image.open('test_photo.jpg')
 
 #resize the image to a 224x224 with the same strategy as in TM2:
@@ -49,16 +49,16 @@ image = ImageOps.fit(image, size, Image.ANTIALIAS)
 #turn the image into a numpy array
 image_array = np.asarray(image)
 
-# display the resized image
+#display the resized image
 image.show()
 
-# Normalize the image
+#Normalize the image
 normalized_image_array = (image_array.astype(np.float32) / 127.0) - 1
 
-# Load the image into the array
+#Load the image into the array
 data[0] = normalized_image_array
 
-# run the inference
+#run the inference
 prediction = model.predict(data)
 print(prediction)
 
@@ -67,7 +67,7 @@ print(prediction)
 st.title("Image Classification with Teachable Machine Learning")
 st.header("Normal X Ray Vs Pneumonia X Ray")
 st.text("Upload a X Ray to detect it is normal or has pneumonia")
-# file upload and handling logic
+#file upload and handling logic
 uploaded_file = st.file_uploader("Choose a X Ray Image", type="jpeg")
 if uploaded_file is not None:
     image = Image.open(uploaded_file).convert('RGB')
