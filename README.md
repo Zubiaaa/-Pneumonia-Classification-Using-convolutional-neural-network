@@ -1,4 +1,4 @@
-# Deploying-Machine-Learning-App-on-Heroku
+# Pneumonia Classification Using convolutional neural network from Chest X-ray Images
 
 Develop an image classification model without writing a single line of code:
 1.	Teachable Machine
