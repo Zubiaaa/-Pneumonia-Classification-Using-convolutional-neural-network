@@ -5,12 +5,16 @@
 1.	Teachable Machine
 
 2.	Kaggle X-ray dataset
+
 Let's take https://teachablemachine.withgoogle.com/ to create our neural network model. Teachable Machine is a web-based tool that makes creating machine learning models fast, easy, and accessible to everyone. It is an AutoML tool from Google.
+
 The X-ray dataset is taken from Kaggle.
+
 https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
+
 X-Ray Image Classification App: The model is trained with the above dataset. When you upload an X-ray image to the app then it classifies whether the X-ray is normal or it has pneumonia symptoms.
 
-Steps to create the model and app:
+#### Steps to create the model and app:
 
 1.	Download the dataset from Kaggle. The link is https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
 The size of the dataset is 1.15 GB and contains around 5856 images .
@@ -35,7 +39,9 @@ https://streamlit.io/
 2.	The code-snippet to test the Keras model is provided in the teachbalemachine and it is:
 
 import tensorflow.keras
+
 from PIL import Image, ImageOps
+
 import numpy as np
 
 #Disable scientific notation for clarity
